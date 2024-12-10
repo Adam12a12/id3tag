@@ -4,28 +4,22 @@
 #include <string.h> 
 #include <stdlib.h>
 #include <unistd.h>
+#include "id3tag.h"
 
 static int one(){
 	return 1;
 }
-int readDir(char*);
-int checkSuffix(const char*, const char*);
-char* returnExt(const char*);
-int prepareName(ID3v2_Tag*, char*);
-int readDir(char*);
-int renameFile(char*);
-int printTag(char*);
 
 int checkSuffix(const char *str, const char *suffix){
     if (!str || !suffix){
-    	return -1;
-	}
-	size_t lenstr = strlen(str);
+      return -1;
+    }
+    size_t lenstr = strlen(str);
     size_t lensuffix = strlen(suffix);
-	if (lensuffix > lenstr){
-    	return -1;
-	}
-	return strcmp(str + (lenstr - lensuffix), suffix);
+    if (lensuffix > lenstr){
+      return -1;
+    }
+    return strcmp(str + (lenstr - lensuffix), suffix);
 }
 
 char* returnExt(const char *str){
