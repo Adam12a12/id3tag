@@ -7,7 +7,7 @@ A simple id3v2 command-line tool.
 2- Append the track number to the name of the file.
 
 # Compiling
-First compile the [id3v2libhere](https://github.com/larsbs/id3v2lib)
+First compile the [id3v2lib](https://github.com/larsbs/id3v2lib)
 
 Then link the id3v2lib while compiling
 
